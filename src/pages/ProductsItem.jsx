@@ -26,10 +26,10 @@ const ProductsItem = () => {
 
     //console.log(newListDetails)
 
-    const [rate, setRate] = useState(5)
+    const [rate, setRate] = useState(1)
 
     useEffect(() => {
-        setRate(5)
+        setRate(1)
     }, [id])
 
     const clearCart = () => {
@@ -74,9 +74,10 @@ const ProductsItem = () => {
                             </div>
                             
                             <div className='rate'>
-                                <button className='me-3' onClick={() => setRate(rate-1)}> <i className="fa-solid fa-square-minus"></i></button> 
+                                
+                                <button className='me-3' onClick={() => setRate(rate-1)} disabled={rate <= 1}> <i className="fa-solid fa-square-minus"></i></button> 
                                 {rate}
-                                <button className='ms-3' onClick={() => setRate(rate+1)}> <i className="fa-solid fa-square-plus"></i></button>
+                                <button className='ms-3' onClick={() => setRate(rate+1)} disabled={rate >= 5}> <i className="fa-solid fa-square-plus"></i></button>
                             </div>
                         </div>
                         <div className='btnCheckOut'>
