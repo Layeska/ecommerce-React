@@ -1,0 +1,99 @@
+.interest {
+    margin: 5% !important;
+    color: rgb(94, 92, 92);
+}
+
+.cardProduct {
+    width: 300px;
+    height: 450px;
+    border: gray 1px solid;
+   /* box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);*/
+}
+
+.col-rows {
+    display: flex;
+    gap: 20px !important;
+}
+
+.col-rowsAux {
+    display: inline-block;
+    margin: 10px;
+    
+}
+
+.containerGrid {
+    width: 100%;
+    margin-top: 50%;
+    margin-left: calc(100% - 82%);
+}
+
+.cardProductDetails {
+    width: 220px;
+    height: 350px;
+    margin-top: -50%;
+}
+
+.divImageAux {
+    width: 200px !important;
+    height: 200px;
+    margin-left: 4% !important;
+    /* background: silver;*/
+}
+
+.divImage {
+    width: 250px;
+    height: 300px;
+    margin: -5% 0% -5% 0%;
+}
+
+.detailsCard { margin-top: -20%; text-align: center;}
+
+.detailsCard button { margin-left: 80%; }
+
+.detailsCard b {
+    color: rgb(82, 13, 13);
+}
+
+.cardProduct img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/*! Container of information pay down */
+
+.containerDown {
+    width: 100%;
+    height: 200px;
+}
+
+.type {
+    
+    width: 108%;
+    text-align: center;
+    font-size: 15px;
+    margin-left: -5%;
+    margin-top: 20%;
+    border-radius: 15px;
+    transition: transform .2s;
+}
+
+.type hr { visibility: hidden; }
+
+.type:hover { transform: scale(1.1); }
+
+.type:hover hr { visibility: visible; }
+
+.type h1 {
+    font-size: 22px;
+    color: #502364;
+    margin-top: 2%;
+}
+
+.type img { margin-left: 5%; }
+
+.type p {
+    text-align: center;
+    color:rgb(94, 92, 92);
+    font-size: 15px;
+}

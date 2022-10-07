@@ -1,0 +1,72 @@
+
+.imageCarousel  {
+    width: 500px !important;
+    height: 250px !important;
+    margin-left: 5%;
+}
+
+.imageCarousel img {
+    object-fit:  scale-down;
+    height: 100%;
+    height: contain;
+}
+
+.titleProductDetails { color: #502364; }
+
+.paragraphDetails { color: rgb(110, 109, 109); }
+
+.containerPriceQuantity { display: flex; }
+
+.containerPrice {
+    width: 35%;
+    text-align: center;
+    margin: auto;
+}
+
+.textPrice {
+    margin: auto;
+    font-size: 22.5px;
+}
+
+.textPrice > b { color: rgb(141, 31, 31); }
+
+.rate {
+    width: 40%;
+    text-align: center;
+    margin: auto;
+    font-size: 25px;
+}
+
+.rate button {
+    border: none;
+    width: 20%;
+    height: 60%;
+    background: transparent;
+    border-radius: 8px ;
+    font-size: 30px;
+    font-weight: 700;
+    color: rgba(53, 12, 71, 0.9);
+}
+
+.rate i:hover { color: #c3c3c3; }
+
+.btnCheckOut {
+    width: 100%;
+    height: 35px;
+    display: inline-block;
+    margin-top: 2% !important;
+}
+
+.btnCheckOut button {
+    background:  rgba(53, 12, 71, 0.9);
+    width: 48%;
+    height: 100%;   
+    margin-left: 5px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+
+.btnCheckOut button:hover { background:   rgba(104, 48, 128, 0.9); }
+
+

@@ -1,0 +1,222 @@
+/*#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}*/
+
+
+/*
+.paragraph {
+  cursor: pointer;
+  border: none;
+}
+
+.paragraph:active {
+  color: rgb(245, 158, 26);
+}
+
+.paragraph:hover {
+  color: rgb(39, 131, 186);
+}
+
+.myAccordion {
+  max-width: 500px;
+  border: none;
+}
+
+.divImage {
+ /* background: salmon;
+  height: 400px;
+  width: 200px;
+
+}
+
+.divImage img {
+  max-width: 100%;
+  max-height: 80%;
+  object-fit: contain;
+  margin: 10% 0;
+}
+
+
+
+.cardProduct {
+  background: hotpink;
+}
+
+.detailsCard {
+  display: flex;
+  justify-content: space-between;
+  gap: 10%;
+ /* background: darkcyan;
+}
+
+.bg-navBar {
+  background: red !important;
+}
+
+*/
+
+/* -- Bar Of Range the Price */
+/*
+.containerInput {
+  position: relative;
+  width: 65vmin;
+  padding: 10px;
+}
+
+.inputsValues  {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  border: 1px solid black;
+  margin-top: 15px;
+}
+
+input[type='range'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  outline: none;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  background-color: transparent;
+  pointer-events: none;
+}
+
+.slider-track {
+  width: 100%;
+  height: 5px;
+  background: #621a1a;
+  position: absolute;
+  margin: auto;
+  bottom: 0;
+  border-radius: 6px;
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  height: 5px;
+}*/
+
+/*! tutorial en youtube*/
+/*
+https://www.youtube.com/watch?v=DfSYmk_6vk8&ab_channel=CodingArtist
+https://www.youtube.com/watch?v=zksYICkbBbY&ab_channel=CodesTutorials
+
+*/
+/*
+.containerInput {
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+/* background: salmon;
+
+}
+
+.containerInput input[type='number'] {
+  width: 70px;
+  height: 30px;
+  background: darkcyan;
+  border: 1px solid #ddd;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.containerInput input[type='number']::-webkit-outer-spin-button,
+.containerInput input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.containerInput .inputsValues {
+  width: 100%;
+  height: 5px;
+  background: gray;
+  outline: none;
+  top: 1px;
+  margin: 10px;
+}
+*/
+/*.containerInput .inputsValues .progress {
+  left: 25%;
+  right: 25%;
+  height: 100%;
+  background: gold;
+  border-radius: 50px;
+  position: absolute;
+}*//*
+
+.inputsValues {
+  display: flex;
+}
+
+.containerInput .inputsValues input[type='range'] {
+  
+  top: -2px;
+  left: -2px;
+  width: 100%;
+  -webkit-appearance: none;
+  background: none;
+  outline: none;
+}
+
+.range-max {
+  background-color: rgb(16, 166, 28);
+}
+
+
+.containerInput .inputsValues input::-webkit-scrollbar-thumb {
+  
+  -webkit-appearance: none;
+  width: 17px;
+  height: 17px;
+  background: blue;
+  border-radius: 50px;
+}*/
+
+/***************************/
+/*==================== 
+	Footer 
+====================== */
