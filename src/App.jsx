@@ -18,7 +18,6 @@ import { getNewProductThunk } from './slices/productNew.slice'
 
 import { Container } from "react-bootstrap";
 import ProtectedRoute from './components/ProtectedRoute'
-import Favorites from './pages/favorites'
 import MyFooter from './components/MyFooter'
 
 
@@ -43,7 +42,7 @@ function App() {
               
               <Route element={<ProtectedRoute/>}>
                 <Route path='/purchases' element={<Purchases/>}></Route>
-                <Route path='/favorites' element={<Favorites/>}></Route>
+              
               </Route>
           </Routes>
         </Container>
