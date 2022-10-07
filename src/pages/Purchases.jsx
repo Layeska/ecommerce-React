@@ -19,10 +19,26 @@ const Purchases = () => {
         const date = Date(info)
         const aux = date
         return aux
+
+       
     }
 
-    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-    const myDateVar= new Date(purchases.createdAt)
+    var date = new Date();
+    const formatDate = (info)=>{
+    let formatted_date = date.getDate() + "-" + (date.getMonth() + 1) + "-" + date.getFullYear()
+    return formatted_date;}
+
+   
+
+
+    
+
+    /*const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    let myDateVar= new Date(purchases.createdAt)
+    myDateVar.format('dd-m-yy')*/
+
+    // <h4>{myDateVar.toLocaleDateString(undefined, options)}</h4>
+    // <h3>Date: {dateFunction(p.createdAt)}</h3>
 
     return (
         <div>
@@ -31,15 +47,16 @@ const Purchases = () => {
                 {   purchases.map(p => (
                         <ListGroup.Item key={p.id}  >
                             <div className='xDiv' >
-                                <h4>{myDateVar.toLocaleDateString(undefined, options)}</h4>
-                                <h3>Date: {dateFunction(p.createdAt)}</h3>
+                                <h5></h5>
+                               <h2>{formatDate(p.createdAt)}</h2>
+                               
                             </div>
                             {p.cart.products.map(item => (
                                 <div key={item.id} >
                                     <p onClick={() => navigate(`/products/${item.id}`)} >{item.title}</p>
                                     <p>{item.price}</p>
-                            </div>
-                ))}
+                                </div>
+                            ))}
                         </ListGroup.Item>
                     ))
                 }

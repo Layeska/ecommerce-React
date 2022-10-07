@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { ListGroup, Offcanvas } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { deleteCartThunk, getCartThunk } from '../slices/cartSlide.slice';
+import {  getCartThunk } from '../slices/cartSlide.slice';
 import {purchaseCartThunk } from '../slices/cartSlide.slice';
 import Card from 'react-bootstrap/Card';
 
@@ -11,6 +11,7 @@ const SideBarCar = ({show, handleClose}) => {
     const dispatch = useDispatch()
     const cart = useSelector(state => state.cartSlide)
     const list = useSelector(state => state.newProduct)
+    
     
 
 
@@ -33,9 +34,9 @@ const SideBarCar = ({show, handleClose}) => {
         setTotal(totalPrice)
     }, [total])
 
-    const deleteProductItem = (id) => {
+    /*const deleteProductItem = (id) => {
         dispatch(deleteCartThunk(id))
-    }
+    }*/
     
     return (
         <>
