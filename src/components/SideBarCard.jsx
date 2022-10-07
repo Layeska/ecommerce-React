@@ -12,9 +12,6 @@ const SideBarCar = ({show, handleClose}) => {
     const cart = useSelector(state => state.cartSlide)
     const list = useSelector(state => state.newProduct)
     
-    
-
-
     useEffect(() => {
         dispatch(getCartThunk())
     }, [])
@@ -54,7 +51,7 @@ const SideBarCar = ({show, handleClose}) => {
                             <Card.Text>
                             <p>Quantity: {item.productsInCart.quantity}</p>
                             <p>Price: $ {item.price}</p>
-                            <button onClick={deleteProductItem(item.id)}>Cancel Buy</button>
+                            <button onClick={() => deleteProductItem(item.id)}>Cancel Buy</button>
                             </Card.Text>
                             </Card.Body>
                         </Card>
