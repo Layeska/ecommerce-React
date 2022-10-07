@@ -12,7 +12,6 @@ const Car = () => {
     return (
       <>
           <OffCanvasExample key={idx} placement={'end'} name={'end'} />
-       
       </>
     )
   }

@@ -16,51 +16,45 @@ const SideBarCar = ({show, handleClose}) => {
         dispatch(getCartThunk())
     }, [])
 
-    const clearCart = () => {
-        dispatch(purchaseCartThunk())
-    }
+    const clearCart = () => { dispatch(purchaseCartThunk()) }
 
     const [total, setTotal] = useState(0)
 
     useEffect(() => {
         let totalPrice = 0
-        cart.forEach(item => {
-            totalPrice += +item.price * item.productsInCart.quantity
-        })
+        cart.forEach(item => { totalPrice += +item.price * item.productsInCart.quantity })
         
         setTotal(totalPrice)
-    }, [total])
+    }, [cart])
 
-    const deleteProductItem = (id) => {
-        dispatch(deleteCartThunk(id))
-    }
+    const deleteProductItem = (id) => { dispatch(deleteCartThunk(id)) }
     
     return (
         <>
             <Offcanvas show={show} onHide={handleClose} placement="end">
-            <Offcanvas.Header closeButton>
-            <Offcanvas.Title>Cart</Offcanvas.Title>
-            </Offcanvas.Header>
-            <Offcanvas.Body>
-            <ListGroup>
-                {
-                    cart.map(item => (
-                        <Card border="light" style={{ width: '18rem' }} key={item.id}>
-                            <Card.Header><Link to={`/products/${item.id}`} onClick={handleClose}> {item.title} </Link></Card.Header>
-                            <Card.Body>
-                            <Card.Text>
-                            <p>Quantity: {item.productsInCart.quantity}</p>
-                            <p>Price: $ {item.price}</p>
-                            <button onClick={() => deleteProductItem(item.id)}>Cancel Buy</button>
-                            </Card.Text>
-                            </Card.Body>
-                        </Card>
-                    ))
-                }
-                <p><b>Total:</b> $ {total}</p>
-                <button onClick={clearCart}>Checkout</button>
-            </ListGroup>
-            </Offcanvas.Body>
+                <Offcanvas.Header closeButton>
+                    <Offcanvas.Title>Cart</Offcanvas.Title>
+                </Offcanvas.Header>
+                <Offcanvas.Body>
+                    <ListGroup>
+                        {
+                            cart.map(item => (
+                                <Card border="light" style={{ width: '18rem' }} key={item.id}>
+                                    <Card.Header><Link to={`/products/${item.id}`} onClick={handleClose}> {item.title} </Link></Card.Header>
+                                    <Card.Body>
+                                        <Card.Text>
+                                            <p>Quantity: {item.productsInCart.quantity}</p>
+                                            <p>Price: $ {item.price}</p>
+                                            <button onClick={() => deleteProductItem(item.id)}>Cancel Buy</button>
+                                        </Card.Text>
+                                    </Card.Body>
+                                </Card>
+                            ))
+                        }
+                        <p><b>Total:</b> $ {total}</p>
+                        <button onClick={clearCart}>Checkout</button>
+                    </ListGroup>
+                </Offcanvas.Body>
         </Offcanvas>
       </>
     )

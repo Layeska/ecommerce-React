@@ -59,12 +59,9 @@ const MyNavBar = () => {
               <Nav.Link className='linkNav' onClick={logeOut}>Log Out</Nav.Link>
             </Nav>
           </Navbar.Collapse>
-         
         </Container>
       </Navbar>
-      
       <SideBarCar show={show} handleClose={handleClose}/>
-
     </div>
   )
 }

@@ -60,7 +60,7 @@ const Home = () => {
                             <Accordion.Body>
                                 { categories.map(category => ( 
                                     <div className='form-check' key={category.id}>
-                                        <label className='form-check-label' for='flexCheckChecked'> {category.name} </label>
+                                        <label className='form-check-label' htmlFor='flexCheckChecked'> {category.name} </label>
                                         <input className='form-check-input paragraph' type='checkbox' id='flexCheckChecked' onClick={() => filterCategory(category.id)}  key={category.id}/>
                                     </div>
                                 ))}
@@ -70,7 +70,7 @@ const Home = () => {
                             <Accordion.Header>Price</Accordion.Header>
                             <Accordion.Body>
                                 <div className='containerInput'>
-                                    <label for="customRange3" className="form-label">$ {inputValue}</label>
+                                    <label htmlFor="customRange3" className="form-label">$ {inputValue}</label>
                                     
                                     <div className='inputsValues'>
                                         <input ref={inputPriceLower} type="range"  min="275" max="1500" step="100" className='range-min' onChange={(e) => setInputValueLower(e.target.value)}></input>

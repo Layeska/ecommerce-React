@@ -19,16 +19,12 @@ const Purchases = () => {
         const date = Date(info)
         const aux = date
         return aux
-
-       
     }
 
     var date = new Date();
     const formatDate = (info)=>{
     let formatted_date = date.getDate() + "-" + (date.getMonth() + 1) + "-" + date.getFullYear()
     return formatted_date;}
-
-   
 
 
     
@@ -49,7 +45,6 @@ const Purchases = () => {
                             <div className='xDiv' >
                                 <h2>Date: {p.createdAt}</h2>
                             </div>
-                            
                             {p.cart.products.map(item => (
                                 <div key={item.id} >
                                     <hr />

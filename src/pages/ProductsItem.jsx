@@ -74,7 +74,6 @@ const ProductsItem = () => {
                             </div>
                             
                             <div className='rate'>
-                                
                                 <button className='me-3' onClick={() => setRate(rate-1)} disabled={rate <= 1}> <i className="fa-solid fa-square-minus"></i></button> 
                                 {rate}
                                 <button className='ms-3' onClick={() => setRate(rate+1)} disabled={rate >= 5}> <i className="fa-solid fa-square-plus"></i></button>
@@ -100,7 +99,6 @@ const ProductsItem = () => {
                                             <div className='detailsCard'>
                                                 <Card.Title>{product.title}</Card.Title>
                                                 <Card.Text> <b>Price:</b> $ {product.price}</Card.Text>
-                                                
                                             </div>
                                         </Card.Body>
                                         </Row>
