@@ -59,7 +59,7 @@ const MyNavBar = () => {
               <Nav.Link className='linkNav' onClick={logeOut}>Log Out</Nav.Link>
             </Nav>
           </Navbar.Collapse>
-          <p style={{color: '#502364'}}> <i className="fa-solid fa-user-shield"></i> Welcome {user[0]?.user.firstName ? user[0]?.user.firstName  : 'user no register'} </p>
+         
         </Container>
       </Navbar>
       
