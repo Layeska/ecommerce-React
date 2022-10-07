@@ -2,7 +2,7 @@ import React from 'react'
 
 const MyFooter = () => {
     return (
-        <footer id='footer' class='footer-1'>
+        <footer id='footer' className='footer-1'>
             <div className='main-footer widgets-dark typo-light'>
                 <div className='container'>
                     <div className='row'>

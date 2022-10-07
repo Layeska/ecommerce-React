@@ -9,7 +9,7 @@ const SignIn = () => {
                     <input type="password" placeholder="password"/>
                     <input type="text" placeholder="email address" />
                     <button>create</button>
-                    <p class="message">Already registered? <button>Sign In</button></p>
+                    <p className="message">Already registered? <button>Sign In</button></p>
                 </form>
             </div>
         </div>

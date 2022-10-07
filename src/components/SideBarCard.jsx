@@ -53,7 +53,7 @@ const SideBarCar = ({show, handleClose}) => {
                             <Card.Text>
                             <p>Quantity: {item.productsInCart.quantity}</p>
                             <p>Price: $ {item.price}</p>
-                            <button onClick={deleteProductItem(item.id)}>Cancel Buy</button>
+                            <button >Cancel Buy</button>
                             </Card.Text>
                             </Card.Body>
                         </Card>

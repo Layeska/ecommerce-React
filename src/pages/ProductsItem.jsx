@@ -37,7 +37,7 @@ const ProductsItem = () => {
     }
 
     const addProductCart = () => {
-        alert('add: ' + rate)
+        alert('add to cart: ' + rate + ' quantity')
 
         const addCart = {
             id: id,
@@ -45,7 +45,6 @@ const ProductsItem = () => {
         }
         
         dispatch(postCartThunk(addCart))
-
     }
 
     return (
