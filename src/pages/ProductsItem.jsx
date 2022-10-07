@@ -90,7 +90,7 @@ const ProductsItem = () => {
                     { relateProducts.map(product => (
                         <Col className='col-rowsAux' key={product.id} onClick={() => navigate(`/products/${product.id}`)}>
                             <div className='containerGrid'>
-                                <Card className='cardProduct cardProductDetails'  onClick={() => navigate(`/products/${news.id}`)} style={{maxWidth: '400px'}}>
+                                <Card className='cardProduct cardProductDetails'  onClick={() => navigate(`/products/${product.id}`)} style={{maxWidth: '400px'}}>
                                     <Row className='g-1 mt-5'>
                                         <div className='divImage divImageAux'>
                                             <Card.Img variant="top" className="img-fluid" src={product.productImgs} style={{ height: "60%" }}/>

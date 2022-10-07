@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { ListGroup, Offcanvas } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import {  getCartThunk } from '../slices/cartSlide.slice';
+import { deleteCartThunk, getCartThunk } from '../slices/cartSlide.slice';
 import {purchaseCartThunk } from '../slices/cartSlide.slice';
 import Card from 'react-bootstrap/Card';
 
@@ -34,9 +34,9 @@ const SideBarCar = ({show, handleClose}) => {
         setTotal(totalPrice)
     }, [total])
 
-    /*const deleteProductItem = (id) => {
+    const deleteProductItem = (id) => {
         dispatch(deleteCartThunk(id))
-    }*/
+    }
     
     return (
         <>
@@ -54,7 +54,7 @@ const SideBarCar = ({show, handleClose}) => {
                             <Card.Text>
                             <p>Quantity: {item.productsInCart.quantity}</p>
                             <p>Price: $ {item.price}</p>
-                            <button >Cancel Buy</button>
+                            <button onClick={deleteProductItem(item.id)}>Cancel Buy</button>
                             </Card.Text>
                             </Card.Body>
                         </Card>
