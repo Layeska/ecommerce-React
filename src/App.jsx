@@ -5,6 +5,7 @@ import './styles/footerStyles.css'
 import './styles/login.css'
 import './styles/productCard.css'
 import './styles/productsDetails.css'
+import './styles/purchases.css'
 import { HashRouter, Route, Routes } from 'react-router-dom'
 
 import Home from './pages/Home'
