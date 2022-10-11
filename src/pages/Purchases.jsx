@@ -15,32 +15,10 @@ const Purchases = () => {
         dispatch(getPurchasesThunk())
     }, [])
 
-    const dateFunction = (info) => {
-        const options = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric' };
-        const date = Date(info)
-        const aux = date
-        return aux
-    }
-
-    var date = new Date();
-    const formatDate = (info)=>{
-    let formatted_date = date.getDate() + "-" + (date.getMonth() + 1) + "-" + date.getFullYear()
-    return formatted_date;}
-
-
-    
-
-    /*const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-    let myDateVar= new Date(purchases.createdAt)
-    myDateVar.format('dd-m-yy')*/
-
-    // <h4>{myDateVar.toLocaleDateString(undefined, options)}</h4>
-    // <h3>Date: {dateFunction(p.createdAt)}</h3>
-
     const nowDate = (info) => {
-        const fechaActual = new Date(info);
-        const opciones = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric' };
-        return fechaActual.toLocaleDateString('en-us', opciones)
+        const dateActual = new Date(info);
+        const options = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric' };
+        return dateActual.toLocaleDateString('en-us', options)
     }
     
 
@@ -59,7 +37,6 @@ const Purchases = () => {
                                         <p onClick={() => navigate(`/products/${item.id}`)}><span>Product: </span> {item.title} <span>Total Paid:</span> $ {item.price}</p>
                                     </blockquote>
                                 ))
-                                
                             }
                         </Card.Body>
                     </Card>

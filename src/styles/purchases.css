@@ -3,7 +3,7 @@
     text-align: center;
 }
 
-.card-header  { background: rgba(227, 187, 245, 0.6) !important; }
+.card-header  {  background: rgba(227, 187, 245, 0.6) !important;  }
 
 .card { margin-top: 2%; }
 
@@ -12,6 +12,47 @@
     text-align: center;
 }
 
-.card-body span {
-    color: #2a0b38;
+.card-body span { color: #2a0b38; }
+
+
+/*! Styles of SideBarCard */
+.productName {
+    text-decoration: none !important;
+    color: #502364;
+}
+
+.cartImages {
+    width: 120px;
+    height: 120px;
+    object-fit: scale-down;
+}
+
+.classBtn {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-left: 6%;
+    font-size: 22px;
+}
+
+.dangerBtn {
+    color: rgb(183, 38, 38);
+    border: none;
+    background: transparent;
+}
+
+.dangerBtn:hover, .updateBtn:hover {
+    border-radius: 10px;
+    color: #502364;
+}
+
+.updateBtn {
+    color: green;
+    background: transparent;
+    border: none;
+}
+
+.totalCheckout {
+    text-align: left;
+    font-size: 26px;
 }

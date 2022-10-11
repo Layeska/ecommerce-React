@@ -47,28 +47,34 @@ const ProductsItem = () => {
         dispatch(postCartThunk(addCart))
     }
 
+
+    const clearCartProduct = () => { 
+        alert('product purchased successfully')
+        dispatch(purchaseCartThunk()) 
+    }
+
     return (
         <Container fluid="md">
             <Row>
                 <Col>
-                        <Carousel variant='dark' className='p-5'>
-                            <Carousel.Item  className='imageCarousel'>
-                                <img className='d-block w-100' src={newListDetails?.productImgs[0]} alt='First slide' />
-                            </Carousel.Item>
-                            <Carousel.Item className='imageCarousel'>
-                                <img className='d-block w-100' src={newListDetails?.productImgs[1]} alt='First slide' />
-                            </Carousel.Item>
-                            <Carousel.Item className='imageCarousel'>
-                                <img className='d-block w-100' src={newListDetails?.productImgs[2]} alt='First slide' />
-                            </Carousel.Item>
-                        </Carousel>
+                    <Carousel variant='dark' className='p-5'>
+                        <Carousel.Item  className='imageCarousel'>
+                            <img className='d-block w-100' src={newListDetails?.productImgs[0]} alt='First slide' />
+                        </Carousel.Item>
+                        <Carousel.Item className='imageCarousel '>
+                            <img className='d-block w-100' src={newListDetails?.productImgs[1]} alt='First slide' />
+                        </Carousel.Item>
+                        <Carousel.Item className='imageCarousel'>
+                            <img className='d-block w-100' src={newListDetails?.productImgs[2]} alt='First slide' />
+                        </Carousel.Item>
+                    </Carousel>
                 </Col>
                 <Col>
                     <Row className='d-flex justify-content-end'>
                         <h2 className='titleProductDetails'>{newListDetails?.title}</h2>
                         <p className='paragraphDetails'>{newListDetails?.description}</p>
 
-                        <div className=' containerPriceQuantity'>
+                        <div className='containerPriceQuantity'>
                             <div className='containerPrice'>
                                 <p className= 'text-nowrap textPrice'>Price: <b>$ {newListDetails?.price} </b></p> 
                             </div>
@@ -81,18 +87,18 @@ const ProductsItem = () => {
                         </div>
                         <div className='btnCheckOut'>
                             <button onClick={addProductCart}>Add to Cart <i className="fa-solid fa-cart-shopping"></i></button>
-                            <button>To Buy</button>
+                            <button onClick={clearCartProduct}>To Buy</button>
                         </div>
                     </Row>
                 </Col>
-                <Row>
+                <Row className='g-3'>
                     <h1 className='interest'><center>Products that may interest you</center></h1>
                     { relateProducts.map(product => (
                         <Col className='col-rowsAux' key={product.id} onClick={() => navigate(`/products/${product.id}`)}>
-                            <div className='containerGrid'>
-                                <Card className='cardProduct cardProductDetails'  onClick={() => navigate(`/products/${product.id}`)} style={{maxWidth: '400px'}}>
+                            <div className='containerGridAux'>
+                                <Card className='cardProductCopy cardProductDetailsAux'  onClick={() => navigate(`/products/${product.id}`)} style={{maxWidth: '400px'}}>
                                     <Row className='g-1 mt-5'>
-                                        <div className='divImage divImageAux'>
+                                        <div className='divImageAux'>
                                             <Card.Img variant="top" className="img-fluid" src={product.productImgs} style={{ height: "60%" }}/>
                                         </div>
                                         <Card.Body>

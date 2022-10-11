@@ -1,9 +1,9 @@
 
 .imageCarousel  {
-    width: 500px !important;
+    /*width: 450px !important;*/
     height: 250px !important;
-    margin-left: 5%;
 }
+
 
 .imageCarousel img {
     object-fit:  scale-down;
@@ -11,6 +11,11 @@
     height: contain;
 }
 
+.carousel-dark .carousel-control-next-icon {
+    color:rgb(141, 31, 31) !important;
+}
+
+/*! Container details of products */
 .titleProductDetails { color: #502364; }
 
 .paragraphDetails { color: rgb(110, 109, 109); }

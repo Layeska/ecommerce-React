@@ -21,8 +21,6 @@ const Home = () => {
         axios.get('https://ecommerce-api-react.herokuapp.com/api/v1/products/categories').then(res => setCategories(res.data.data.categories))
     }, [])
 
-    console.log(categories)
-
     useEffect(() => {
         setNewProductFilter(newListProduct)
     }, [newListProduct])
@@ -36,7 +34,6 @@ const Home = () => {
         const filtered = newListProduct.filter((news) => news.title.toLowerCase().includes(search.toLowerCase()))
         setNewProductFilter(filtered);
     }
-    //console.log(newProductFilter)
 
     const inputPriceHigher = useRef('')
     const inputPriceLower = useRef('')
@@ -71,15 +68,12 @@ const Home = () => {
                             <Accordion.Body>
                                 <div className='containerInput'>
                                     <label htmlFor="customRange3" className="form-label">$ {inputValue}</label>
-                                    
                                     <div className='inputsValues'>
                                         <input ref={inputPriceLower} type="range"  min="275" max="1500" step="100" className='range-min' onChange={(e) => setInputValueLower(e.target.value)}></input>
                                         <input ref={inputPriceHigher} type="range"  min="275" max="1500" step="100" className='range-max' onChange={(e) => setInputValue(e.target.value)}></input>
                                     </div>
-                                    
                                 </div>
                             </Accordion.Body>
-                            
                         </Accordion.Item>
                     </Accordion>
                 </Col>
@@ -88,24 +82,27 @@ const Home = () => {
                 <br />
                     <InputGroup className='mb-3'>
                         <Form.Control placeholder="Search Products" onChange={(e) => setSearch(e.target.value)} value={search}/>
-                        <Button variant="outline-secondary" onClick={searchProducts}>Search</Button>
+                        <Button variant='outline-secondary btnSearchProduct' onClick={searchProducts}>Search</Button>
                     </InputGroup>
 
-                    <Row xs={1} md={2} xl={3} xxl={5} className='g-3' >
+                    <Row xs={1} md={2} xl={3} className='g-3' >
                         {newProductFilter.map((news ) => (
                             <Col key={news.id} className='col-rows'>
-                                <Card className='cardProduct'  onClick={() => navigate(`/products/${news.id}`)} style={{maxWidth: '400px'}}>
-                                <Row className='g-1 mt-5'>
-                                    <div className='divImage'>
-                                        <Card.Img variant="top" className="img-fluid" src={news.productImgs} style={{ height: "60%" }}/>
-                                    </div>
-                                    <Card.Body>
-                                        <div className='detailsCard'>
-                                            <Card.Title>{news.title}</Card.Title>
-                                            <Card.Text> <b>Price:</b> $ {news.price}</Card.Text>
-                                            <Button variant="warning"><i className="fa-solid fa-cart-shopping"></i></Button>
+                                <Card className='cardProduct' onClick={() => navigate(`/products/${news.id}`)} style={{maxWidth: '400px', width: '300px'}}>
+                                    <Row className='g-1 mt-5'>
+                                        <div className='divImage'>
+                                            <Card.Img variant="top" className="img-fluid" src={news.productImgs} style={{ height: "60%" }}/>
                                         </div>
-                                    </Card.Body>
+                                        <Card.Body>
+                                            <div className='detailsCard'>
+                                                <Card.Title>{news.title}</Card.Title>
+                                                <div className='downCart'>
+                                                    <Card.Text> <b>$ {news.price}</b> </Card.Text>
+                                                    <Button variant="warning"><i className="fa-solid fa-cart-shopping"></i></Button>
+                                                </div>
+                                            </div>
+                                        </Card.Body>
+                                        
                                     </Row>
                                 </Card>
                             </Col>
