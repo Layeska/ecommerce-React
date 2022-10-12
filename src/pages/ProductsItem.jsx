@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link, useNavigate, useParams } from 'react-router-dom'
-import Carousel from 'react-bootstrap/Carousel';
-import Container from 'react-bootstrap/Container';
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
-import { postCartThunk, purchaseCartThunk } from '../slices/cartSlide.slice';
-import Card from 'react-bootstrap/Card';
-import { Button, Form, InputGroup } from "react-bootstrap";
+import Carousel from 'react-bootstrap/Carousel'
+import Container from 'react-bootstrap/Container'
+import Col from 'react-bootstrap/Col'
+import Row from 'react-bootstrap/Row'
+import { postCartThunk, purchaseCartThunk } from '../slices/cartSlide.slice'
+import Card from 'react-bootstrap/Card'
+import { Button, Form, InputGroup } from "react-bootstrap"
 
 
 const ProductsItem = () => {
@@ -31,10 +31,6 @@ const ProductsItem = () => {
     useEffect(() => {
         setRate(1)
     }, [id])
-
-    const clearCart = () => {
-        dispatch(purchaseCartThunk())
-    }
 
     const addProductCart = () => {
         alert('add to cart: ' + rate + ' quantity')
@@ -70,35 +66,30 @@ const ProductsItem = () => {
                     </Carousel>
                 </Col>
                 <Col>
-                    <Row className='d-flex justify-content-end'>
+                    <Row className='d-flex justify-content-between p-1 '>
                         <h2 className='titleProductDetails'>{newListDetails?.title}</h2>
                         <p className='paragraphDetails'>{newListDetails?.description}</p>
-
-                        <div className='containerPriceQuantity'>
-                            <div className='containerPrice'>
-                                <p className= 'text-nowrap textPrice'>Price: <b>$ {newListDetails?.price} </b></p> 
-                            </div>
-                            
-                            <div className='rate'>
-                                <button className='me-3' onClick={() => setRate(rate-1)} disabled={rate <= 1}> <i className="fa-solid fa-square-minus"></i></button> 
-                                {rate}
-                                <button className='ms-3' onClick={() => setRate(rate+1)} disabled={rate >= 5}> <i className="fa-solid fa-square-plus"></i></button>
-                            </div>
+                        <div className=' d-flex justify-content-between w-50 rate'>
+                            <p className= 'text-nowrap textPrice'>Price: <b>$ {newListDetails?.price} </b></p> 
+                            <button className='btn-lg w-30 m-5' onClick={() => setRate(rate-1)} disabled={rate <= 1}> <i className="fa-solid fa-square-minus"></i></button> 
+                            <p className='mt-5'>{rate}</p>
+                            <button className='btn-lg w-25 m-5' onClick={() => setRate(rate+1)} disabled={rate >= 5}> <i className="fa-solid fa-square-plus"></i></button>
                         </div>
+                        
                         <div className='btnCheckOut'>
-                            <button onClick={addProductCart}>Add to Cart <i className="fa-solid fa-cart-shopping"></i></button>
-                            <button onClick={clearCartProduct}>To Buy</button>
+                            <button className='w-50 p-3 btn-lg' onClick={addProductCart}>Add to Cart <i className="fa-solid fa-cart-shopping"></i></button>
+                            <button className='w-50 p-3 btn-lg' onClick={clearCartProduct}>To Buy</button>
                         </div>
                     </Row>
                 </Col>
-                <Row className='g-3'>
-                    <h1 className='interest'><center>Products that may interest you</center></h1>
+                <h1 className='interest'><center>Products that may interest you</center></h1>
+                <Row xs={1} md={3} xl={5} className='g-4 col-rowsAux'>
                     { relateProducts.map(product => (
-                        <Col className='col-rowsAux' key={product.id} onClick={() => navigate(`/products/${product.id}`)}>
-                            <div className='containerGridAux'>
-                                <Card className='cardProductCopy cardProductDetailsAux'  onClick={() => navigate(`/products/${product.id}`)} style={{maxWidth: '400px'}}>
-                                    <Row className='g-1 mt-5'>
-                                        <div className='divImageAux'>
+                        <Col className='col-rows' key={product.id} onClick={() => navigate(`/products/${product.id}`)}>
+                            <div  className='containerGrid'>
+                                <Card className='cardProduct '  onClick={() => navigate(`/products/${product.id}`)} style={{maxWidth: '400px'}}>
+                                    <Row className='g-1 mt-4'>
+                                        <div className='divImage'>
                                             <Card.Img variant="top" className="img-fluid" src={product.productImgs} style={{ height: "60%" }}/>
                                         </div>
                                         <Card.Body>
@@ -107,9 +98,9 @@ const ProductsItem = () => {
                                                 <Card.Text> <b>Price:</b> $ {product.price}</Card.Text>
                                             </div>
                                         </Card.Body>
-                                        </Row>
-                                    </Card>
-                                </div>
+                                    </Row>
+                                </Card>
+                            </div>
                         </Col>
                         ))
                     }

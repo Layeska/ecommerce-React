@@ -1,13 +1,13 @@
 import axios from 'axios'
-import { Button, Form, InputGroup } from "react-bootstrap";
+import { Button, Form, InputGroup } from "react-bootstrap"
 import React, { useEffect, useState, useRef } from 'react'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import Card from 'react-bootstrap/Card';
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
-import Accordion from 'react-bootstrap/Accordion';
-import Container from 'react-bootstrap/Container';
+import Card from 'react-bootstrap/Card'
+import Col from 'react-bootstrap/Col'
+import Row from 'react-bootstrap/Row'
+import Accordion from 'react-bootstrap/Accordion'
+import Container from 'react-bootstrap/Container'
 
 
 const Home = () => {
@@ -45,7 +45,7 @@ const Home = () => {
         inputPriceLower.current = inputValueLower
     }, [inputValue, inputValueLower])
 
-    console.log(inputValue)
+    //console.log(inputValue)
 
     return (
         <Container fluid="md">
@@ -96,13 +96,9 @@ const Home = () => {
                                         <Card.Body>
                                             <div className='detailsCard'>
                                                 <Card.Title>{news.title}</Card.Title>
-                                                <div className='downCart'>
                                                     <Card.Text> <b>$ {news.price}</b> </Card.Text>
-                                                    <Button variant="warning"><i className="fa-solid fa-cart-shopping"></i></Button>
-                                                </div>
                                             </div>
                                         </Card.Body>
-                                        
                                     </Row>
                                 </Card>
                             </Col>
@@ -116,6 +112,8 @@ const Home = () => {
 
 
 export default Home
+
+//<Button onClick={addProductCart} variant="warning"><i className="fa-solid fa-cart-shopping"></i></Button>
 
 {/*<label for="customRange3" class="form-label">$ {inputValue}</label>*/}
 {/*<div className={'paragraph'} key={category.id} onClick={() => filterCategory(category.id)}>{category.name}</div>*/}

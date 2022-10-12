@@ -39,9 +39,7 @@ const MyNavBar = () => {
               <button title="search product" className="btn btn-outline" type="button" id="button-addon2"><i className="fa-solid fa-magnifying-glass"></i></button>
             </div>
             <div className='btnShop'>
-            <Nav.Link as={Link} to='/favorites'>
-                <button title="purchases" type="button" className="btn btn-light position-relative"><i className="fa-regular fa-heart"></i></button>
-            </Nav.Link>
+              <button title="Log out" type="button" className="btn btn-light position-relative" onClick={logeOut}><i className="fa-solid fa-right-from-bracket"></i></button>
               <Nav.Link onClick={handleShow}>
                 <button type='button' className='btnShopping'><i className='fa-solid fa-cart-shopping m-2'></i> | <i className='fa-solid fa-angle-down m-2'></i></button>
               </Nav.Link>
@@ -56,7 +54,6 @@ const MyNavBar = () => {
               <Navbar.Brand className='linkNav nav1' to='/' as={Link}>Home</Navbar.Brand>
               <Nav.Link className='linkNav' as={Link} to='/purchases'>Purchases</Nav.Link>
               <Nav.Link className='linkNav ' as={Link} to='/login'>My Account</Nav.Link>
-              <Nav.Link className='linkNav' onClick={logeOut}>Log Out</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
