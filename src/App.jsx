@@ -43,7 +43,6 @@ function App() {
               
               <Route element={<ProtectedRoute/>}>
                 <Route path='/purchases' element={<Purchases/>}></Route>
-              
               </Route>
           </Routes>
         </Container>
