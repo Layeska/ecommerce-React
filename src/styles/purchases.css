@@ -29,10 +29,11 @@
 
 .classBtn {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     width: 90%;
     margin-left: 6%;
-    font-size: 22px;
+    font-size: 18px;
 }
 
 .dangerBtn {
@@ -53,6 +54,55 @@
 }
 
 .totalCheckout {
-    text-align: left;
+    text-align: right;
     font-size: 26px;
 }
+
+.totalCheckout b {
+    color: rgb(124, 20, 20);
+}
+
+.btnCheck {
+    border: none;
+    background: #310552;
+    color: beige;
+    border-radius: 15px;
+}
+
+.btnCheck:hover {
+    background: #502364;
+}
+
+.alertEmpty {
+    color: red;
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+
+/**/
+.simplescrollup__button {
+	position: fixed;
+	bottom: 3rem;
+	right: 3rem;
+	transition: 1s all;
+	z-index: 10000;
+}
+.simplescrollup__button--show {
+	transform: translateX(0);
+}
+.simplescrollup__button--hide {
+	transform: translateX(100px);
+}
+
+/*!--*/
+/*Flecha para hacer la pagina hacia arriba*/
+.ir-arriba{
+    display:none;
+    background-repeat:no-repeat;
+    font-size:20px;
+    color:black;
+    cursor:pointer;
+    position:fixed;
+   
+    z-index:2;
+  }

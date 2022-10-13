@@ -5,7 +5,7 @@ import Carousel from 'react-bootstrap/Carousel'
 import Container from 'react-bootstrap/Container'
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
-import { postCartThunk, purchaseCartThunk } from '../slices/cartSlide.slice'
+import { patchCartThunk, postCartThunk, purchaseCartThunk } from '../slices/cartSlide.slice'
 import Card from 'react-bootstrap/Card'
 import { Button, Form, InputGroup } from "react-bootstrap"
 
@@ -40,7 +40,7 @@ const ProductsItem = () => {
             quantity: rate 
         }
         
-        dispatch(postCartThunk(addCart))
+        dispatch(patchCartThunk(addCart))
     }
 
 
@@ -49,9 +49,11 @@ const ProductsItem = () => {
         dispatch(purchaseCartThunk()) 
     }
 
+
     return (
         <Container fluid="md">
             <Row>
+                
                 <Col>
                     <Carousel variant='dark' className='p-5'>
                         <Carousel.Item  className='imageCarousel'>

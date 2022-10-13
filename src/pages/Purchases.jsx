@@ -30,6 +30,12 @@ const Purchases = () => {
                     <Card key={buy.id}>
                         <Card.Header className='card-bodyColor'><b>Purchase made:</b> <i>{nowDate(buy.createdAt)}</i></Card.Header>
                         <Card.Body>
+                            <a className="ir-arriba" title="Volver arriba">
+                                <span className="fa-stack">
+                                    <i className="fa fa-circle fa-stack-2x"></i>
+                                    <i className="fa fa-arrow-up fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
                             <h5>Details of purchase</h5> 
                             {
                                 buy.cart.products.map(item => (

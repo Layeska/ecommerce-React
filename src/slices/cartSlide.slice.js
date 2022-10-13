@@ -13,6 +13,15 @@ export const cartSlideSlice = createSlice ({
     }
 })
 
+export const patchCartThunk = (addCart) => (dispatch) => {
+    dispatch(setIsLoading(true))
+    return axios.patch('https://ecommerce-api-react.herokuapp.com/api/v1/cart', addCart, getConfig())
+    .then(res => dispatch(getCartThunk()))
+    .finally(() => dispatch(setIsLoading(false)))
+}
+
+
+//update quantity of product
 export const postCartThunk = (addCart) => (dispatch) => {
     dispatch(setIsLoading(true))
     return axios.post('https://ecommerce-api-react.herokuapp.com/api/v1/cart', addCart, getConfig())
