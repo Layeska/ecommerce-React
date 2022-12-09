@@ -63,18 +63,6 @@ const Home = () => {
                                 ))}
                             </Accordion.Body>
                         </Accordion.Item>
-                        <Accordion.Item eventKey="1">
-                            <Accordion.Header>Price</Accordion.Header>
-                            <Accordion.Body>
-                                <div className='containerInput'>
-                                    <label htmlFor="customRange3" className="form-label">$ {inputValue}</label>
-                                    <div className='inputsValues'>
-                                        <input ref={inputPriceLower} type="range"  min="275" max="1500" step="100" className='range-min' onChange={(e) => setInputValueLower(e.target.value)}></input>
-                                        <input ref={inputPriceHigher} type="range"  min="275" max="1500" step="100" className='range-max' onChange={(e) => setInputValue(e.target.value)}></input>
-                                    </div>
-                                </div>
-                            </Accordion.Body>
-                        </Accordion.Item>
                     </Accordion>
                 </Col>
                 
