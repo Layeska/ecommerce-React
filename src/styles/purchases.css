@@ -37,20 +37,15 @@
 }
 
 .dangerBtn {
-    color: rgb(183, 38, 38);
+    color: white;
     border: none;
-    background: transparent;
+    background: rgb(237, 76, 76);
+    border-radius: 10px;
+    width: 100%;
 }
 
 .dangerBtn:hover, .updateBtn:hover {
-    border-radius: 10px;
-    color: #502364;
-}
-
-.updateBtn {
-    color: green;
-    background: transparent;
-    border: none;
+    background: rgb(211, 61, 61);
 }
 
 .totalCheckout {
@@ -79,30 +74,3 @@
     font-size: 1.6rem;
 }
 
-/**/
-.simplescrollup__button {
-	position: fixed;
-	bottom: 3rem;
-	right: 3rem;
-	transition: 1s all;
-	z-index: 10000;
-}
-.simplescrollup__button--show {
-	transform: translateX(0);
-}
-.simplescrollup__button--hide {
-	transform: translateX(100px);
-}
-
-/*!--*/
-/*Flecha para hacer la pagina hacia arriba*/
-.ir-arriba{
-    display:none;
-    background-repeat:no-repeat;
-    font-size:20px;
-    color:black;
-    cursor:pointer;
-    position:fixed;
-   
-    z-index:2;
-  }

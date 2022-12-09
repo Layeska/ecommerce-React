@@ -10,25 +10,7 @@ import Card from 'react-bootstrap/Card';
 const SideBarCar = ({show, handleClose}) => {
     const dispatch = useDispatch()
     const cart = useSelector(state => state.cartSlide)
-    const list = useSelector(state => state.newProduct)
-
     const [isId, setIsId] = useState(0)
-    
-    const idCart = cart.map(value => value.productsInCart.productId)
-    const idList = list.map(id => id.id)
-    const aux = idCart.concat(idList)
-
-    const temp = [...aux].sort()
-    let duplicate = []
-
-    for(let i=0; i< temp.length; i++) {
-        if(temp[i+1] === temp[i]) {
-            duplicate.push(temp[i])
-        }
-    }
-
-    console.log(duplicate.map(i => i))
-
     
     useEffect(() => {
         dispatch(getCartThunk())
@@ -47,16 +29,13 @@ const SideBarCar = ({show, handleClose}) => {
     }, [cart])
 
     const deleteProductItem = (id) => { dispatch(deleteCartThunk(id)) }
-   
     const {id} = useParams()
-
     
-
     return (
         <>
             {
                 total != 0 ? (
-                    <Offcanvas show={show} onHide={handleClose} placement="end">
+                    <Offcanvas show={show} onHide={handleClose} placement='end'>
                         <Offcanvas.Header closeButton>
                             <Offcanvas.Title>Shopping cart</Offcanvas.Title>
                         </Offcanvas.Header>
@@ -71,8 +50,7 @@ const SideBarCar = ({show, handleClose}) => {
                                                     <p><b>Quantity:</b> {item.productsInCart.quantity}</p>
                                                     <p><b>Price:</b> ${item.price}</p>
                                                     <div className='classBtn'>    
-                                                        <button className='dangerBtn' onClick={() => deleteProductItem(item.id)}><i className="fa-solid fa-trash-can"></i> Delete</button>
-                                                        <Link className='productName' to={`/products/${item.id}`} onClick={handleClose}> <button className='updateBtn'><i className='fa-solid fa-pen'></i> Edit</button></Link>
+                                                        <button className='dangerBtn' onClick={() => deleteProductItem(item.id)}><i className='fa-solid fa-trash-can'></i> Delete</button>
                                                     </div>
                                                 </Card.Text>
                                             </Card.Body>

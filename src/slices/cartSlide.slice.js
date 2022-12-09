@@ -15,7 +15,7 @@ export const cartSlideSlice = createSlice ({
 
 export const patchCartThunk = (addCart) => (dispatch) => {
     dispatch(setIsLoading(true))
-    return axios.patch('https://ecommerce-api-react.herokuapp.com/api/v1/cart', addCart, getConfig())
+    return axios.patch('https://e-commerce-api.academlo.tech/cart', addCart, getConfig())
     .then(res => dispatch(getCartThunk()))
     .finally(() => dispatch(setIsLoading(false)))
 }
@@ -24,28 +24,28 @@ export const patchCartThunk = (addCart) => (dispatch) => {
 //update quantity of product
 export const postCartThunk = (addCart) => (dispatch) => {
     dispatch(setIsLoading(true))
-    return axios.post('https://ecommerce-api-react.herokuapp.com/api/v1/cart', addCart, getConfig())
+    return axios.post('https://e-commerce-api.academlo.tech/cart', addCart, getConfig())
     .then(res => dispatch(getCartThunk()))
     .finally(() => dispatch(setIsLoading(false)))
 }
 
 export const getCartThunk = () => (dispatch) => {
     dispatch(setIsLoading(true))
-    return axios.get('https://ecommerce-api-react.herokuapp.com/api/v1/cart', getConfig())
+    return axios.get('https://e-commerce-api.academlo.tech/cart', getConfig())
     .then(res => dispatch(setCart(res.data.data.cart.products)))
     .finally(() => dispatch(setIsLoading(false)))
 }
 
 export const purchaseCartThunk = () => (dispatch) => {
     dispatch(setIsLoading(true))
-    return axios.post('https://ecommerce-api-react.herokuapp.com/api/v1/purchases', {}, getConfig())
+    return axios.post('https://e-commerce-api.academlo.tech/purchases', {}, getConfig())
     .then(res => dispatch(setCart([])))
     .finally(() => dispatch(setIsLoading(false)))
 }
 
 export const deleteCartThunk = (id) => (dispatch) => {
     dispatch(setIsLoading(true))
-    return axios.delete(`https://ecommerce-api-react.herokuapp.com/api/v1/cart/${id}`, getConfig())
+    return axios.delete(`https://e-commerce-api.academlo.tech/cart/${id}`, getConfig())
     .then(res => dispatch(getCartThunk()))
     .finally(() => dispatch(setIsLoading(false)))
 }

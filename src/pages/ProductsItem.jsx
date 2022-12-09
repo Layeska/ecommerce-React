@@ -40,7 +40,7 @@ const ProductsItem = () => {
             quantity: rate 
         }
         
-        dispatch(patchCartThunk(addCart))
+        dispatch(postCartThunk(addCart))
     }
 
 
