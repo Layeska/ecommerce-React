@@ -1,13 +1,13 @@
-# ecommerce-React
+# E-commerce de productos digitales
 https://ecommerce-react-ana.netlify.app/
 ![image](https://i.postimg.cc/yY5HR84Z/shoopad.jpg)
-
-- Consumiendo API facilitada en el bootcamp ACADEMLO. Se puede mostrar productos, comprarlos, añadirlos al carrito, mirar las compras, logearse y crear un usuario
+<br/>
+<h3>Consumiendo API facilitada en el bootcamp ACADEMLO. Se puede mostrar productos, comprarlos, añadirlos al carrito, mirar las compras, logearse y crear un usuario</h3>
 
 ## Tecnologias Usadas
 - Bootstrap React
 - Bootswatch
 - React JS
-  - Redux.js
-  - Axios.js
-  - Redux.js
+  - Redux
+  - Axios
+  - Redux
