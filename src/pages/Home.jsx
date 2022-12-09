@@ -18,7 +18,7 @@ const Home = () => {
     const [search, setSearch] = useState('')
 
     useEffect(() => {
-        axios.get('https://ecommerce-api-react.herokuapp.com/api/v1/products/categories').then(res => setCategories(res.data.data.categories))
+        axios.get('https://e-commerce-api.academlo.tech/api/v1/products/categories').then(res => setCategories(res.data.data.categories))
     }, [])
 
     useEffect(() => {
@@ -91,7 +91,7 @@ const Home = () => {
                                 <Card className='cardProduct' onClick={() => navigate(`/products/${news.id}`)} style={{maxWidth: '400px', width: '300px'}}>
                                     <Row className='g-1 mt-5'>
                                         <div className='divImage'>
-                                            <Card.Img variant="top" className="img-fluid" src={news.productImgs} style={{ height: "60%" }}/>
+                                            <Card.Img variant="top" className="img-fluid" src={news.productImgs[0]} style={{ height: "60%" }}/>
                                         </div>
                                         <Card.Body>
                                             <div className='detailsCard'>

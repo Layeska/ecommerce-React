@@ -16,7 +16,7 @@ const Login = () => {
 
     const submit = (data) => {        
         if(show === false) {
-            axios.post('https://ecommerce-api-react.herokuapp.com/api/v1/users/login',data).then((res) => {
+            axios.post('https://e-commerce-api.academlo.tech/api/v1/users/login',data).then((res) => {
                 alert('User Correct! Welcome')
                 localStorage.setItem('token', res.data.data.token)
                 localStorage.setItem('userName', res.data.data.user.firstName)
@@ -27,7 +27,7 @@ const Login = () => {
                 console.log(error.response)
             })
         } else {
-            axios.post('https://ecommerce-api-react.herokuapp.com/api/v1/users', data).then((res) => {
+            axios.post('https://e-commerce-api.academlo.tech/api/v1/users/register', data).then((res) => {
                 alert('User created successfully!')
                 localStorage.setItem('userName', res.data.data.user.firstName)
             }).catch(error => console.log(error.response))
